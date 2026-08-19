@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual Técnico y de Usuario | Robot Mesero</title>
+<style>
+:root{--bg:#f4f7fb;--panel:#fff;--ink:#172033;--muted:#687386;--primary:#1c375a;--primary2:#225b85;--line:#dce3ec;--soft:#eef4fa;--warn:#fff6df;--ok:#eaf6ee;--danger:#fdebec;--shadow:0 8px 28px rgba(31,48,72,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.58}a{color:var(--primary2);text-decoration:none}.layout{display:grid;grid-template-columns:280px minmax(0,1fr);min-height:100vh}aside{position:sticky;top:0;height:100vh;background:#10243d;color:#fff;padding:24px 18px;overflow:auto}.brand{font-weight:800;letter-spacing:.04em;font-size:14px;margin-bottom:6px}.subtitle{color:#b9c8d8;font-size:12px;margin-bottom:22px}nav a{display:block;color:#dbe6f1;padding:8px 10px;border-radius:8px;font-size:14px;margin:2px 0}nav a:hover{background:rgba(255,255,255,.08);color:#fff}main{max-width:1180px;width:100%;padding:42px 48px 70px}.hero{background:linear-gradient(135deg,#18324f,#275f88);color:#fff;padding:34px;border-radius:18px;box-shadow:var(--shadow);margin-bottom:28px}.hero h1{margin:0 0 8px;font-size:34px;line-height:1.12}.hero p{margin:4px 0;color:#dfeaf5}.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.badge{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);padding:5px 10px;border-radius:999px;font-size:12px}section{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;margin:18px 0;box-shadow:var(--shadow)}h2{font-size:25px;margin:0 0 16px;color:var(--primary)}h3{font-size:18px;margin:24px 0 8px;color:var(--primary2)}p{margin:8px 0 12px}.muted{color:var(--muted)}.note{padding:14px 16px;border-radius:10px;background:var(--soft);border-left:4px solid var(--primary2);margin:14px 0}.note.warn{background:var(--warn);border-left-color:#d39a14}.note.ok{background:var(--ok);border-left-color:#2d8a4f}.note.danger{background:var(--danger);border-left-color:#c94b52}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff}.card strong{display:block;color:var(--primary);margin-bottom:6px}.steps{counter-reset:step;list-style:none;padding:0}.steps li{counter-increment:step;position:relative;padding:4px 0 18px 48px;min-height:42px}.steps li::before{content:counter(step);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--primary2);color:#fff;font-weight:800}.button-name{display:inline-block;background:#e8f0f8;color:#183d60;border:1px solid #c7d8e9;border-radius:7px;padding:1px 7px;font-weight:700}code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}pre{position:relative;background:#101a28;color:#eaf1f8;padding:15px 46px 15px 16px;border-radius:10px;overflow:auto;font-size:13px}.copy{position:absolute;right:8px;top:8px;background:#274663;color:#fff;border:0;border-radius:7px;padding:5px 8px;cursor:pointer;font-size:11px}.subnav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:18px}.subnav a{display:block;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#f8fafc}table{width:100%;border-collapse:collapse;margin:14px 0 8px;font-size:14px}th{background:var(--primary);color:#fff;text-align:left;padding:11px 12px}td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}tr:nth-child(even) td{background:#f8fafc}.kpi{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}.incidents td:first-child{font-weight:700;color:#253954;min-width:190px}.search{width:100%;padding:11px 13px;border:1px solid #b8c5d4;border-radius:10px;font-size:14px;margin-bottom:14px}.footer{color:var(--muted);text-align:center;font-size:12px;padding-top:18px}@media(max-width:900px){.layout{display:block}aside{position:relative;height:auto}main{padding:22px 14px 48px}.grid,.subnav{grid-template-columns:1fr}.hero{padding:24px}.hero h1{font-size:27px}}@media print{aside,.copy,.search{display:none!important}.layout{display:block}main{max-width:none;padding:0}section,.hero{box-shadow:none;break-inside:avoid}body{background:#fff}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+  <div class="brand">NEXUS PATIO TECH</div>
+  <div class="subtitle">Robot Mesero · Operación y soporte</div>
+  <nav>
+    <a href="#intro">1. Introducción</a>
+    <a href="#robots">2. Robots</a>
+    <a href="#accesos">3. Accesos</a>
+    <a href="#servicios">4. Servicios</a>
+    <a href="#red">5. Red y conectividad</a>
+    <a href="#administracion">6. Servicios y puertos</a>
+    <a href="#diagnostico">7. Diagnóstico</a>
+    <a href="#incidencias">8. Incidencias</a>
+    <a href="#consideraciones">9. Consideraciones</a>
+    <a href="#escalamiento">10. Escalamiento</a>
+    <a href="#interfaz"><strong>11. Control remoto</strong></a>
+  </nav>
+</aside>
+<main>
+  <header class="hero">
+    <div class="kpi" style="color:#c8d9e8">Manual interno</div>
+    <h1>Manual Técnico de Operación y Soporte</h1>
+    <p>Robot Mesero · Nexus Patio Tech</p>
+    <div class="badges"><span class="badge">Versión 3.0</span><span class="badge">Agosto 2026</span><span class="badge">Equipo técnico, soporte y operación</span></div>
+  </header>
+
+  <div class="note warn"><strong>Seguridad:</strong> las contraseñas de SSH, AnyDesk y otras credenciales no se almacenan en esta documentación. Deben consultarse en el repositorio de credenciales autorizado.</div>
+
+  <section id="intro">
+    <h2>1. Introducción</h2>
+    <h3>Propósito</h3>
+    <p>Proporcionar al equipo técnico y de soporte la información necesaria para operar, administrar y diagnosticar los Robots Meseros, incluyendo acceso remoto, conectividad mediante Tailscale, servicios de software y procedimientos básicos de recuperación.</p>
+    <h3>Alcance</h3>
+    <p>Este manual cubre la operación técnica y los problemas recurrentes detectados. No sustituye la documentación de desarrollo del código fuente ni la documentación de hardware especializado.</p>
+    <h3>Descripción</h3>
+    <p>El Robot Mesero apoya las operaciones de atención y entrega dentro del establecimiento piloto de MegaCenter, Santa Cruz, transportando productos y asistiendo al personal durante la atención a clientes.</p>
+  </section>
+
+  <section id="robots">
+    <h2>2. Identificación de los Robots Meseros</h2>
+    <div class="grid"><div class="card"><span class="kpi">Mesero 1</span><strong>100.99.244.72</strong><span class="muted">IP Tailscale</span></div><div class="card"><span class="kpi">Mesero 2</span><strong>100.105.14.4</strong><span class="muted">IP Tailscale</span></div><div class="card"><span class="kpi">Mesero 3</span><strong>100.113.184.85</strong><span class="muted">IP Tailscale</span></div></div>
+    <div class="note warn"><strong>Importante:</strong> después de volver a registrar un robot en Tailscale, comprobar la IP con <code>tailscale ip -4</code> y revisar las configuraciones que dependan de ella.</div>
+  </section>
+
+  <section id="accesos">
+    <h2>3. Acceso y administración remota</h2>
+    <h3>Google Meet</h3>
+    <table><thead><tr><th>Equipo</th><th>Google Meet</th></tr></thead><tbody><tr><td>Mesero 1</td><td><a href="https://meet.google.com/fbf-sxky-uxp">meet.google.com/fbf-sxky-uxp</a></td></tr><tr><td>Mesero 2</td><td><a href="https://meet.google.com/uab-zbge-xqx">meet.google.com/uab-zbge-xqx</a></td></tr><tr><td>Mesero 3</td><td><a href="https://meet.google.com/bxq-buwm-mbt">meet.google.com/bxq-buwm-mbt</a></td></tr></tbody></table>
+    <h3>AnyDesk</h3>
+    <table><thead><tr><th>Equipo</th><th>ID</th><th>Contraseña</th></tr></thead><tbody><tr><td>Mesero 1</td><td>1874857590</td><td>Consultar credenciales</td></tr><tr><td>Mesero 2</td><td>1137906927</td><td>Consultar credenciales</td></tr><tr><td>Mesero 3</td><td>915500402</td><td>Consultar credenciales</td></tr></tbody></table>
+    <h3>SSH</h3><p>Formato general:</p><pre><button class="copy">Copiar</button><code>ssh &lt;usuario&gt;@&lt;IP_TAILSCALE&gt;</code></pre>
+  </section>
+
+  <section id="servicios">
+    <h2>4. Servicios principales</h2>
+    <table><thead><tr><th>Servicio</th><th>Función</th><th>Puerto</th></tr></thead><tbody><tr><td><code>botcamera.service</code></td><td>Cámaras / streaming</td><td>8889</td></tr><tr><td><code>serbot-interfaz.service</code></td><td>Control y manejo del robot</td><td>5000</td></tr><tr><td><code>mini_app_qr_v1.service</code></td><td>Flutter Desktop / reproducción de audios y GIFs</td><td>5050</td></tr><tr><td><code>voice_clone.service</code></td><td>Text-to-Speech</td><td>9000</td></tr></tbody></table>
+    <h3>URLs por equipo</h3>
+    <table><thead><tr><th>Equipo</th><th>Cámaras</th><th>Control</th><th>Flutter</th><th>TTS</th></tr></thead><tbody><tr><td>Mesero 1</td><td>100.99.244.72:8889/camaras/</td><td>100.99.244.72:5000</td><td>100.99.244.72:5050</td><td>100.99.244.72:9000</td></tr><tr><td>Mesero 2</td><td>100.105.14.4:8889/camaras/</td><td>100.105.14.4:5000</td><td>100.105.14.4:5050</td><td>100.105.14.4:9000</td></tr><tr><td>Mesero 3</td><td>100.113.184.85:8889/camaras/</td><td>100.113.184.85:5000</td><td>100.113.184.85:5050</td><td>100.113.184.85:9000</td></tr></tbody></table>
+  </section>
+
+  <section id="red"><h2>5. Red y conectividad</h2><p>Los Robots Meseros y las computadoras de los operadores deben estar conectados a la red Tailscale correspondiente para acceder a los servicios internos.</p><div class="note"><strong>Problema frecuente:</strong> si las pestañas de cámaras o control no cargan en la computadora del operador, comprobar primero que Tailscale se encuentre abierto desde el área de iconos de la barra de tareas.</div></section>
+
+  <section id="administracion">
+    <h2>6. Administración y verificación de servicios</h2>
+    <h3>Estado de cámaras y control</h3><pre><button class="copy">Copiar</button><code>sudo systemctl status botcamera.service
+sudo systemctl status serbot-interfaz.service</code></pre>
+    <h3>Aplicación Flutter</h3><pre><button class="copy">Copiar</button><code>systemctl --user status mini_app_qr_v1.service
+systemctl --user restart mini_app_qr_v1.service
+journalctl --user -u mini_app_qr_v1.service -n 100 --no-pager</code></pre>
+    <h3>Puertos</h3><pre><button class="copy">Copiar</button><code>sudo ss -lntp
+sudo ss -lntp | grep 5000
+sudo ss -lntp | grep 5050
+sudo ss -lntp | grep 8889
+sudo ss -lntp | grep 9000</code></pre>
+  </section>
+
+  <section id="diagnostico"><h2>7. Procedimiento básico de diagnóstico</h2><ol><li>Identificar la funcionalidad afectada.</li><li>Comprobar Tailscale en la computadora del operador.</li><li>Comprobar la IP Tailscale del Robot Mesero.</li><li>Verificar el servicio relacionado.</li><li>Verificar el puerto relacionado.</li><li>Revisar logs si el servicio falla.</li><li>Aplicar únicamente la acción relacionada con el componente afectado.</li><li>Escalar si el problema persiste.</li></ol></section>
+
+  <section id="incidencias">
+    <h2>8. Incidencias frecuentes y solución</h2>
+    <table class="incidents"><thead><tr><th>Incidencia</th><th>Verificación / diagnóstico</th><th>Acción recomendada</th></tr></thead><tbody><tr><td>No cargan las pestañas de control o cámaras</td><td>Comprobar que Tailscale esté abierto y conectado en la PC del operador.</td><td>Abrir Tailscale y recargar las pestañas.</td></tr><tr><td>Tailscale está activo pero control/cámaras no cargan</td><td>Revisar <code>botcamera.service</code>, <code>serbot-interfaz.service</code> e IP con <code>tailscale ip -4</code>.</td><td>Reiniciar el servicio afectado si está detenido o corregir URL/configuración si la IP cambió.</td></tr><tr><td>La interfaz de audios/GIFs no se comunica con Flutter</td><td>Comprobar Flutter, puerto 5050 y permiso de acceso a red local del navegador.</td><td>Habilitar red local, recargar la interfaz y verificar el puerto 5050.</td></tr><tr><td>No se escuchan los audios en Mesero 1</td><td>Revisar el dispositivo de salida de Ubuntu.</td><td>Seleccionar <code>Speaker</code>.</td></tr><tr><td>La interfaz de control carga pero WASD no mueve el robot</td><td>Revisar <strong>Modo STM32</strong>.</td><td>Cambiar hasta <strong>TELEDIRIGIDO</strong> y volver a probar.</td></tr><tr><td>Mesero 2 inicia sin IP Tailscale</td><td>Ejecutar <code>tailscale status</code>, <code>tailscale ip -4</code> y revisar <code>tailscaled</code>.</td><td>Recuperación temporal: reiniciar el SO y volver a verificar. Escalar si persiste.</td></tr><tr><td>Flutter no aparece después de reiniciar el robot</td><td>Comprobar si Flutter Desktop está ejecutándose.</td><td>Usar el acceso directo del escritorio y verificar el puerto 5050.</td></tr></tbody></table>
+  </section>
+
+  <section id="consideraciones"><h2>9. Consideraciones operativas</h2><ul><li><strong>Mesero 1:</strong> verificar salida de audio <code>Speaker</code>.</li><li><strong>Modo de conducción:</strong> comprobar <code>TELEDIRIGIDO</code> antes de diagnosticar una falla WASD.</li><li><strong>Mesero 2:</strong> el reinicio por falta de IP Tailscale es una recuperación temporal.</li><li><strong>Flutter:</strong> después de reiniciar Ubuntu, comprobar que la aplicación esté iniciada.</li></ul></section>
+
+  <section id="escalamiento"><h2>10. Escalamiento de incidencias</h2><p>Antes de escalar, registrar Robot Mesero, fecha/hora, síntoma, IP Tailscale, estado del servicio relacionado, puerto, logs, acciones realizadas y resultado.</p><div class="note ok"><strong>Objetivo:</strong> permitir que desarrollo o infraestructura continúen el diagnóstico sin repetir las comprobaciones básicas.</div></section>
+
+  <section id="interfaz">
+    <h2>11. Manual de uso de la interfaz de control remoto</h2>
+    <div class="note warn"><strong>Importante:</strong> confirma siempre el robot seleccionado antes de pulsar un botón. Cada orden se envía de inmediato al equipo elegido.</div>
+    <div class="subnav"><a href="#inicio">11.1 Antes de comenzar</a><a href="#conexion">11.2 Conectar un robot</a><a href="#pago">11.3 Pago QR y ventas</a><a href="#gifs">11.4 Expresiones</a><a href="#pantalla">11.5 Pantalla y producto</a><a href="#audios">11.6 Audios y alertas</a><a href="#tts">11.7 Texto a voz</a><a href="#catalogo">11.8 Comercios y productos</a><a href="#consola">11.9 Consola</a><a href="#flujo">11.10 Flujo recomendado</a><a href="#problemas">11.11 Problemas frecuentes</a><a href="#cuidados">11.12 Recomendaciones</a></div>
+    <p>Esta interfaz permite controlar las funciones de atención del Robot Mesero a distancia. Desde una sola pantalla se pueden mostrar expresiones, presentar productos, reproducir mensajes, revisar pagos y organizar los productos disponibles.</p>
+    <p>La mayoría de las acciones se realizan seleccionando el robot y pulsando el botón correspondiente.</p>
+    <div class="grid">
+      <div class="card"><span class="kpi">Control visual</span><strong>Expresiones y pantalla</strong><span class="muted">Cambia la cara del robot y muestra productos.</span></div>
+      <div class="card"><span class="kpi">Atención</span><strong>Mensajes y voz</strong><span class="muted">Reproduce saludos, avisos, alertas y frases escritas.</span></div>
+      <div class="card"><span class="kpi">Venta</span><strong>Pagos y catálogo</strong><span class="muted">Consulta ventas y define qué productos se muestran.</span></div>
+    </div>
+  </section>
+
+  <section id="inicio">
+    <h2>11.1 Antes de comenzar</h2>
+    <ul>
+      <li>Enciende el Robot Mesero y espera a que su pantalla principal termine de cargar.</li>
+      <li>Comprueba que el dispositivo del operador tenga acceso a la red privada de los robots.</li>
+      <li>Abre la página de control en un navegador actualizado.</li>
+      <li>Activa el volumen del dispositivo si deseas escuchar también los audios desde el panel.</li>
+      <li>Evita tener abierta la misma interfaz en varios dispositivos controlando el mismo robot al mismo tiempo.</li>
+    </ul>
+    <div class="note"><strong>Distribución de la pantalla:</strong> los controles se encuentran en el panel principal. La consola de la derecha o de la parte inferior muestra el resultado de cada acción.</div>
+  </section>
+
+  <section id="conexion">
+    <h2>11.2 Conectar un robot</h2>
+    <ol class="steps">
+      <li>Abre la lista ubicada en la parte superior de la interfaz.</li>
+      <li>Selecciona <strong>Mesero 1</strong>, <strong>Mesero 2</strong> o <strong>Mesero 3</strong>. La opción <strong>Local</strong> se reserva para pruebas realizadas directamente en el equipo.</li>
+      <li>Pulsa <span class="button-name">Conectar</span>.</li>
+      <li>Espera a que el indicador cambie de <strong>Offline</strong> a <strong>Online</strong>.</li>
+      <li>Comprueba que las listas de comercios y productos aparezcan en pantalla.</li>
+    </ol>
+    <div class="note ok"><strong>Online:</strong> el panel pudo comunicarse con el robot y ya se pueden utilizar los controles.</div>
+    <div class="note danger"><strong>Offline:</strong> el robot no respondió. No continúes enviando órdenes hasta revisar la conexión.</div>
+    <p>La selección queda guardada para la próxima vez que se abra el panel, pero aun así se recomienda verificarla antes de cada uso.</p>
+  </section>
+
+  <section id="pago">
+    <h2>11.3 Pago QR y contador de ventas</h2>
+    <p>El bloque <strong>Pago QR</strong> informa lo que está ocurriendo durante una venta. Su estado se actualiza automáticamente después de conectar el robot.</p>
+    <table><thead><tr><th>Información</th><th>Qué significa</th></tr></thead><tbody>
+      <tr><td>Polling detenido</td><td>El robot no está esperando la confirmación de un pago.</td></tr>
+      <tr><td>Polling activo</td><td>El robot está consultando si el pago presentado por el cliente fue confirmado.</td></tr>
+      <tr><td>Detalle del pago</td><td>Puede mostrar el producto, número de orden, comercio e importe asociado.</td></tr>
+      <tr><td>Ventas</td><td>Cantidad de operaciones confirmadas durante la sesión.</td></tr>
+      <tr><td>Total en Bs</td><td>Suma acumulada de las ventas registradas.</td></tr>
+      <tr><td>Última venta</td><td>Hora de la confirmación más reciente.</td></tr>
+    </tbody></table>
+    <div class="note"><strong>Uso habitual:</strong> muestra un producto en el robot y deja que el sistema cambie el estado del pago automáticamente. Esta versión no presenta botones visibles para iniciar o detener manualmente la consulta.</div>
+  </section>
+
+  <section id="gifs">
+    <h2>11.4 Expresiones del robot</h2>
+    <p>La sección <strong>Gifs</strong> cambia la expresión mostrada en la pantalla del robot. La orden se aplica al pulsar una opción.</p>
+    <table><thead><tr><th>Botón</th><th>Uso sugerido</th></tr></thead><tbody>
+      <tr><td>Normal</td><td>Estado habitual o regreso a una expresión neutral.</td></tr>
+      <tr><td>Feliz / Amor</td><td>Saludo, agradecimiento o interacción positiva.</td></tr>
+      <tr><td>Enojado / Llorando / Triste</td><td>Interacciones especiales o demostraciones.</td></tr>
+      <tr><td>Dinero</td><td>Promoción o momento relacionado con la compra.</td></tr>
+      <tr><td>Dormido / Confundido</td><td>Animaciones especiales durante una interacción.</td></tr>
+      <tr><td>SixSeven</td><td>Animación temática acompañada del contenido correspondiente.</td></tr>
+    </tbody></table>
+    <div class="note warn">Pulsa una sola vez y espera a que la pantalla cambie. Pulsar varias expresiones rápidamente puede hacer que solo se vea la última.</div>
+  </section>
+
+  <section id="pantalla">
+    <h2>11.5 Pantalla y presentación del producto</h2>
+    <table><thead><tr><th>Control</th><th>Resultado</th></tr></thead><tbody>
+      <tr><td>Café + imagen</td><td>Muestra el producto y reproduce el mensaje de presentación.</td></tr>
+      <tr><td>Solo imagen del producto</td><td>Muestra el producto sin reproducir el saludo principal.</td></tr>
+      <tr><td>Indicar presionar botón de pago</td><td>Reproduce una instrucción para orientar al cliente hacia el pago.</td></tr>
+    </tbody></table>
+    <p>Antes de presentar un producto, revisa en la sección <strong>Productos</strong> que el artículo deseado esté visible y que el catálogo corresponda al comercio correcto.</p>
+  </section>
+
+  <section id="audios">
+    <h2>11.6 Audios, saludos y alertas</h2>
+    <p>Los botones de audio permiten hablar al cliente sin escribir. Al pulsarlos, el mensaje puede sonar en el robot y también en el dispositivo desde el que se opera.</p>
+    <h3>Saludos e interacciones</h3>
+    <ul>
+      <li>“Hola, ¿qué tal?”</li>
+      <li>Presentación del Robot Mesero y pregunta del nombre.</li>
+      <li>Invitación a cambiar de producto.</li>
+    </ul>
+    <h3>Mensajes de atención y venta</h3>
+    <ul>
+      <li>Oferta de café y promoción de compra.</li>
+      <li>Agradecimiento por la compra.</li>
+      <li>Aviso al personal sobre un pedido.</li>
+      <li>Solicitud para recoger la bandeja.</li>
+      <li>Entrega del café.</li>
+      <li>Solicitud para devolver un producto a la bandeja.</li>
+      <li>Oferta de brownie, postre de tres leches y mensajes de Kíky.</li>
+    </ul>
+    <h3>Sirenas y sonidos</h3>
+    <ol class="steps">
+      <li>Activa el interruptor <strong>Sirenas/sonidos</strong>.</li>
+      <li>Selecciona una sirena, bocina o sonido de la lista.</li>
+      <li>Ajusta el volumen. Usa valores entre <strong>0</strong> y <strong>1</strong>; por ejemplo, <strong>0.5</strong> corresponde aproximadamente a la mitad.</li>
+      <li>Pulsa el botón ▶ para reproducirlo.</li>
+    </ol>
+    <h3>Audio personalizado</h3>
+    <p>Esta opción se utiliza únicamente cuando el personal conoce el nombre exacto del audio guardado. Escribe su ruta, elige el volumen y pulsa ▶. La opción <strong>Forzar</strong> permite reemplazar un audio que ya esté sonando.</p>
+    <div class="note warn"><strong>Para detener un sonido:</strong> pulsa <span class="button-name">Detener</span>. Evita reproducir varios audios seguidos sin esperar, especialmente durante la atención a un cliente.</div>
+  </section>
+
+  <section id="tts">
+    <h2>11.7 Texto a Voz (TTS)</h2>
+    <p>Esta herramienta convierte una frase escrita en voz. Es útil para mensajes que no existen entre los botones preparados.</p>
+    <ol class="steps">
+      <li>Conecta primero el Robot Mesero.</li>
+      <li>Comprueba que el indicador muestre <strong>TTS Online</strong>.</li>
+      <li>Escribe una frase clara y breve en el cuadro <strong>Texto a Voz</strong>.</li>
+      <li>Pulsa ▶ y espera a que termine la reproducción.</li>
+    </ol>
+    <div class="note"><strong>Importante:</strong> el audio generado se reproduce desde el navegador del operador. Mantén el volumen encendido y no cierres la página mientras esté hablando.</div>
+    <div class="note danger"><strong>TTS Offline:</strong> la función de voz escrita no está disponible. Los botones de audios preparados pueden seguir funcionando si el robot permanece Online.</div>
+  </section>
+
+  <section id="catalogo">
+    <h2>11.8 Comercios y productos</h2>
+    <h3>Comercios</h3>
+    <p>Cada comercio aparece con su nombre, identificador y cantidad de productos visibles. El interruptor permite habilitarlo o deshabilitarlo. Al deshabilitarlo, sus productos dejan de participar en la presentación del robot.</p>
+    <h3>Productos</h3>
+    <p>Los productos aparecen agrupados por comercio. Cada fila muestra nombre, identificador y precio.</p>
+    <table><thead><tr><th>Acción</th><th>Resultado</th></tr></thead><tbody>
+      <tr><td>Activar el interruptor</td><td>El producto queda visible para el robot.</td></tr>
+      <tr><td>Desactivar el interruptor</td><td>El producto se oculta.</td></tr>
+      <tr><td>Pulsar el alfiler 📌</td><td>Fija o libera el producto para controlar su permanencia visible.</td></tr>
+      <tr><td>Recargar</td><td>Solicita nuevamente la lista actual de productos.</td></tr>
+      <tr><td>Guardar filtros</td><td>Confirma la selección mostrada y vuelve a cargar la lista.</td></tr>
+    </tbody></table>
+    <div class="note warn">Los cambios de los interruptores se envían al momento. Realiza una modificación por vez y espera a que la lista se actualice.</div>
+  </section>
+
+  <section id="consola">
+    <h2>11.9 Consola de mensajes</h2>
+    <p>La consola muestra un registro con la hora y el resultado de cada acción. Sirve para confirmar si el robot aceptó una orden y para informar un problema al equipo de soporte.</p>
+    <table><thead><tr><th>Mensaje o color</th><th>Interpretación</th></tr></thead><tbody>
+      <tr><td>OK</td><td>La orden fue recibida correctamente.</td></tr>
+      <tr><td>Advertencia</td><td>La acción requiere atención; por ejemplo, el audio estaba ocupado o la voz no está disponible.</td></tr>
+      <tr><td>ERR / NET ERR</td><td>El robot no respondió o rechazó la acción.</td></tr>
+      <tr><td>Limpiar</td><td>Borra únicamente los mensajes visibles de la consola.</td></tr>
+    </tbody></table>
+    <p>Si debes solicitar ayuda, toma una captura que incluya el robot seleccionado, los indicadores Online/Offline y las últimas líneas de la consola.</p>
+  </section>
+
+  <section id="flujo">
+    <h2>11.10 Flujo recomendado de atención</h2>
+    <ol class="steps">
+      <li>Selecciona el Robot Mesero correcto y pulsa <strong>Conectar</strong>.</li>
+      <li>Confirma que el estado sea <strong>Online</strong>.</li>
+      <li>Revisa que el comercio y el producto necesarios estén habilitados.</li>
+      <li>Elige una expresión amigable, como <strong>Normal</strong> o <strong>Feliz</strong>.</li>
+      <li>Usa <strong>Café + imagen</strong> o reproduce el saludo apropiado.</li>
+      <li>Cuando corresponda, reproduce la indicación para presionar el botón de pago.</li>
+      <li>Observa el bloque de Pago QR hasta que la venta quede registrada.</li>
+      <li>Reproduce el agradecimiento o el mensaje de entrega.</li>
+      <li>Devuelve la expresión a <strong>Normal</strong> al terminar.</li>
+    </ol>
+  </section>
+
+  <section id="problemas">
+    <h2>11.11 Solución de problemas</h2>
+    <input id="incidentSearch" class="search" placeholder="Buscar: conexión, audio, TTS, producto, pago...">
+    <table class="incidents" id="incidentTable"><thead><tr><th>Problema</th><th>Qué revisar</th><th>Qué hacer</th></tr></thead><tbody>
+      <tr><td>El indicador permanece Offline</td><td>Robot seleccionado, encendido del equipo y acceso a la red privada.</td><td>Selecciona nuevamente el robot, pulsa Conectar y recarga la página si no responde.</td></tr>
+      <tr><td>El panel está Online, pero una orden no se refleja</td><td>Último mensaje de la consola y estado de la pantalla del robot.</td><td>Espera unos segundos y prueba una sola vez. Si aparece un error, guarda una captura.</td></tr>
+      <tr><td>No se escucha un audio</td><td>Volumen del robot y del dispositivo del operador; mensaje de la consola.</td><td>Sube el volumen, pulsa Detener y vuelve a reproducir el mensaje una vez.</td></tr>
+      <tr><td>Suena en el navegador, pero no en el robot</td><td>Indicador Online y respuesta mostrada en la consola.</td><td>Reconecta el robot. Si persiste, informa qué audio se utilizó.</td></tr>
+      <tr><td>TTS aparece Offline</td><td>Que el robot principal esté Online.</td><td>Vuelve a pulsar Conectar. Si continúa Offline, utiliza los mensajes preparados y reporta la incidencia.</td></tr>
+      <tr><td>No aparecen comercios o productos</td><td>Mensaje mostrado dentro de ambas secciones.</td><td>Pulsa Recargar después de conectar. No continúes cambiando filtros si la lista sigue vacía.</td></tr>
+      <tr><td>Un producto no aparece en el robot</td><td>Comercio habilitado, interruptor del producto y estado del alfiler.</td><td>Activa el comercio y el producto, espera la actualización y vuelve a mostrar la imagen.</td></tr>
+      <tr><td>El pago no cambia de estado</td><td>Producto activo, importe y conexión del robot.</td><td>Espera unos segundos. Si no cambia, registra hora, producto e importe y contacta a soporte.</td></tr>
+      <tr><td>Se seleccionó el robot equivocado</td><td>Nombre visible en la lista superior.</td><td>Detén cualquier audio, selecciona el robot correcto y pulsa Conectar antes de continuar.</td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="cuidados">
+    <h2>11.12 Recomendaciones de uso</h2>
+    <ul>
+      <li>Verifica siempre el robot seleccionado antes de iniciar una atención.</li>
+      <li>No pulses repetidamente un botón mientras esperas una respuesta.</li>
+      <li>Usa sirenas y bocinas solo cuando la situación lo justifique y con un volumen adecuado.</li>
+      <li>No compartas la página de control con personas no autorizadas.</li>
+      <li>No escribas información privada de clientes en Texto a Voz.</li>
+      <li>Antes de reportar un problema, anota el robot, la hora, la acción realizada y el mensaje de la consola.</li>
+    </ul>
+    <div class="note ok"><strong>Para pedir soporte:</strong> envía una captura de la interfaz y explica qué esperabas que ocurriera, qué ocurrió realmente y qué robot estaba seleccionado.</div>
+  </section>
+
+  <div class="footer">Nexus Patio Tech · Manual Técnico, de Operación y Control Remoto · Versión 3.0</div>
+</main>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(btn=>{
+  btn.addEventListener('click',async()=>{
+    const text=btn.parentElement.querySelector('code').innerText;
+    await navigator.clipboard.writeText(text);
+    const old=btn.textContent;btn.textContent='Copiado';
+    setTimeout(()=>btn.textContent=old,1200);
+  });
+});
+const search=document.getElementById('incidentSearch');
+search.addEventListener('input',()=>{const q=search.value.toLowerCase().trim();document.querySelectorAll('#incidentTable tbody tr').forEach(row=>{row.style.display=row.innerText.toLowerCase().includes(q)?'':'none'})});
+</script>
+</body>
+</html>
