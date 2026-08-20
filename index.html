@@ -50,16 +50,16 @@
 
   <section id="robots">
     <h2>2. Identificación de los Robots Meseros</h2>
-    <div class="grid"><div class="card"><span class="kpi">Mesero 1</span><strong>100.99.244.72</strong><span class="muted">IP Tailscale</span></div><div class="card"><span class="kpi">Mesero 2</span><strong>100.105.14.4</strong><span class="muted">IP Tailscale</span></div><div class="card"><span class="kpi">Mesero 3</span><strong>100.113.184.85</strong><span class="muted">IP Tailscale</span></div></div>
+    <div class="grid"><div class="card"><span class="kpi">Mesero 1</span><strong>100.99.244.72</strong><span class="muted">IP Tailscale</span></div><div class="card"><span class="kpi">Mesero 2</span><strong>100.105.14.4</strong><span class="muted">IP Tailscale</span></div><div class="card"><span class="kpi">Mesero 3</span><strong>100.113.184.85</strong><span class="muted">IP Tailscale</span></div><div class="card"><span class="kpi">Mesero 4</span><strong>100.116.45.43</strong><span class="muted">IP Tailscale</span></div></div>
     <div class="note warn"><strong>Importante:</strong> después de volver a registrar un robot en Tailscale, comprobar la IP con <code>tailscale ip -4</code> y revisar las configuraciones que dependan de ella.</div>
   </section>
 
   <section id="accesos">
     <h2>3. Acceso y administración remota</h2>
     <h3>Google Meet</h3>
-    <table><thead><tr><th>Equipo</th><th>Google Meet</th></tr></thead><tbody><tr><td>Mesero 1</td><td><a href="https://meet.google.com/fbf-sxky-uxp">meet.google.com/fbf-sxky-uxp</a></td></tr><tr><td>Mesero 2</td><td><a href="https://meet.google.com/uab-zbge-xqx">meet.google.com/uab-zbge-xqx</a></td></tr><tr><td>Mesero 3</td><td><a href="https://meet.google.com/bxq-buwm-mbt">meet.google.com/bxq-buwm-mbt</a></td></tr></tbody></table>
+    <table><thead><tr><th>Equipo</th><th>Google Meet</th></tr></thead><tbody><tr><td>Mesero 1</td><td><a href="https://meet.google.com/fbf-sxky-uxp">meet.google.com/fbf-sxky-uxp</a></td></tr><tr><td>Mesero 2</td><td><a href="https://meet.google.com/uab-zbge-xqx">meet.google.com/uab-zbge-xqx</a></td></tr><tr><td>Mesero 3</td><td><a href="https://meet.google.com/bxq-buwm-mbt">meet.google.com/bxq-buwm-mbt</a></td></tr><tr><td>Mesero 4</td><td>Pendiente</td></tr></tbody></table>
     <h3>AnyDesk</h3>
-    <table><thead><tr><th>Equipo</th><th>ID</th><th>Contraseña</th></tr></thead><tbody><tr><td>Mesero 1</td><td>1874857590</td><td>Consultar credenciales</td></tr><tr><td>Mesero 2</td><td>1137906927</td><td>Consultar credenciales</td></tr><tr><td>Mesero 3</td><td>915500402</td><td>Consultar credenciales</td></tr></tbody></table>
+    <table><thead><tr><th>Equipo</th><th>ID</th><th>Contraseña</th></tr></thead><tbody><tr><td>Mesero 1</td><td>1874857590</td><td>Consultar credenciales</td></tr><tr><td>Mesero 2</td><td>1137906927</td><td>Consultar credenciales</td></tr><tr><td>Mesero 3</td><td>915500402</td><td>Consultar credenciales</td></tr><tr><td>Mesero 4</td><td>1920743996</td><td>Consultar credenciales</td></tr></tbody></table>
     <h3>SSH</h3><p>Formato general:</p><pre><button class="copy">Copiar</button><code>ssh &lt;usuario&gt;@&lt;IP_TAILSCALE&gt;</code></pre>
   </section>
 
@@ -67,7 +67,7 @@
     <h2>4. Servicios principales</h2>
     <table><thead><tr><th>Servicio</th><th>Función</th><th>Puerto</th></tr></thead><tbody><tr><td><code>botcamera.service</code></td><td>Cámaras / streaming</td><td>8889</td></tr><tr><td><code>serbot-interfaz.service</code></td><td>Control y manejo del robot</td><td>5000</td></tr><tr><td><code>mini_app_qr_v1.service</code></td><td>Flutter Desktop / reproducción de audios y GIFs</td><td>5050</td></tr><tr><td><code>voice_clone.service</code></td><td>Text-to-Speech</td><td>9000</td></tr></tbody></table>
     <h3>URLs por equipo</h3>
-    <table><thead><tr><th>Equipo</th><th>Cámaras</th><th>Control</th><th>Flutter</th><th>TTS</th></tr></thead><tbody><tr><td>Mesero 1</td><td>100.99.244.72:8889/camaras/</td><td>100.99.244.72:5000</td><td>100.99.244.72:5050</td><td>100.99.244.72:9000</td></tr><tr><td>Mesero 2</td><td>100.105.14.4:8889/camaras/</td><td>100.105.14.4:5000</td><td>100.105.14.4:5050</td><td>100.105.14.4:9000</td></tr><tr><td>Mesero 3</td><td>100.113.184.85:8889/camaras/</td><td>100.113.184.85:5000</td><td>100.113.184.85:5050</td><td>100.113.184.85:9000</td></tr></tbody></table>
+    <table><thead><tr><th>Equipo</th><th>Cámaras</th><th>Control</th><th>Flutter</th><th>TTS</th></tr></thead><tbody><tr><td>Mesero 1</td><td>100.99.244.72:8889/camaras/</td><td>100.99.244.72:5000</td><td>100.99.244.72:5050</td><td>100.99.244.72:9000</td></tr><tr><td>Mesero 2</td><td>100.105.14.4:8889/camaras/</td><td>100.105.14.4:5000</td><td>100.105.14.4:5050</td><td>100.105.14.4:9000</td></tr><tr><td>Mesero 3</td><td>100.113.184.85:8889/camaras/</td><td>100.113.184.85:5000</td><td>100.113.184.85:5050</td><td>100.113.184.85:9000</td></tr><tr><td>Mesero 4</td><td>100.116.45.43:8889/camaras/</td><td>100.116.45.43:5000</td><td>100.116.45.43:5050</td><td>100.116.45.43:9000</td></tr></tbody></table>
   </section>
 
   <section id="red"><h2>5. Red y conectividad</h2><p>Los Robots Meseros y las computadoras de los operadores deben estar conectados a la red Tailscale correspondiente para acceder a los servicios internos.</p><div class="note"><strong>Problema frecuente:</strong> si las pestañas de cámaras o control no cargan en la computadora del operador, comprobar primero que Tailscale se encuentre abierto desde el área de iconos de la barra de tareas.</div></section>
@@ -126,7 +126,7 @@ sudo ss -lntp | grep 9000</code></pre>
     <h2>11.2 Conectar un robot</h2>
     <ol class="steps">
       <li>Abre la lista ubicada en la parte superior de la interfaz.</li>
-      <li>Selecciona <strong>Mesero 1</strong>, <strong>Mesero 2</strong> o <strong>Mesero 3</strong>. La opción <strong>Local</strong> se reserva para pruebas realizadas directamente en el equipo.</li>
+      <li>Selecciona <strong>Mesero 1</strong>, <strong>Mesero 2</strong>, <strong>Mesero 3</strong> o <strong>Mesero 4</strong>. La opción <strong>Local</strong> se reserva para pruebas realizadas directamente en el equipo.</li>
       <li>Pulsa <span class="button-name">Conectar</span>.</li>
       <li>Espera a que el indicador cambie de <strong>Offline</strong> a <strong>Online</strong>.</li>
       <li>Comprueba que las listas de comercios y productos aparezcan en pantalla.</li>
